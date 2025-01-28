@@ -7,16 +7,18 @@ import "./styles/singleBlog.css"
 import Header from "./components/header"
 import Footer from "./components/footer"
 
-const RootLayout = ({ children }) => {
-    return (
-        <html lang="en">
-            <body>
-                <Header />
-                <main>{children}</main>
-                <Footer />
-            </body>
-        </html>
-    )
-}
+type RootLayoutProps = {
+  children: ReactNode;
+};
+
+const RootLayout = ({ children }: RootLayoutProps) => {
+  return (
+    <html>
+      <body>
+        {children}
+      </body>
+    </html>
+  );
+};
 
 export default RootLayout
